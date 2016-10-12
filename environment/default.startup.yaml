@@ -1,0 +1,7 @@
+MAILMAN_EMAIL_HOST: &host lists.example.org
+MAILMAN_URL_HOST: *host
+
+MAILMAN_ADM: admin
+MAILMAN_ADM_PASS: admin
+MAILMAN_SITE_PASS: bobby
+

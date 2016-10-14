@@ -3,6 +3,8 @@ FIRST_START_DONE="${CONTAINER_STATE_DIR}/postfix-first-start-done"
 
 # container first start
 if [ ! -e "$FIRST_START_DONE" ]; then
+    log-helper info initializing postfix configuration
+
     postconf -e "relay_domains = ${MAILMAN_EMAIL_HOST}"
     postconf -e 'mailman_destination_recipient_limit = 1'
     postconf -e 'transport_maps = hash:/etc/postfix/transport'
